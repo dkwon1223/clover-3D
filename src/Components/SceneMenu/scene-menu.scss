@@ -1,0 +1,55 @@
+@import '../../styles/typography';
+
+article {
+  position: absolute;
+  z-index: 100;
+  top: 2em;
+  right: 3em;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+h1 {
+  @extend %altform-regular;
+  color: #004400;
+}
+
+.accordionWrapper {
+  border-radius: 0.5em;
+  border: 1px solid #238801;
+  padding: 0.35em;
+}
+
+summary {
+  border-radius: 0.25em;
+  padding: 1em;
+  padding-right: 1.5em;
+  margin-right: .5em;
+}
+
+.accordion {
+  @extend %altform-light;
+}
+
+.accordionBody {
+  padding: 0.5em;
+}
+
+.sceneMenuDirections {
+  padding: 0.5em;
+  font-size: small;
+}
+
+.sceneMenuDirections span {
+  display: flex;
+  align-items: center; 
+  gap: 8px;            
+  margin-bottom: 4px;  
+}
+
+.badge {
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}

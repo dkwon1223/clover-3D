@@ -1,0 +1,71 @@
+$clover-cdn-fonts-url: 'https://cloverstatic.com/content/fonts/altform';
+
+/* Altform Regular */
+@font-face {
+  font-family: Altform;
+  font-display: swap;
+  src: url(#{$clover-cdn-fonts-url}/Altform-Regular.woff2) format('woff2'),
+    url(#{$clover-cdn-fonts-url}/Altform-Regular.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+/* Altform Light */
+@font-face {
+  font-family: Altform;
+  font-display: swap;
+  src: url(#{$clover-cdn-fonts-url}/Altform-Light.woff2) format('woff2'),
+    url(#{$clover-cdn-fonts-url}/Altform-Light.woff) format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+/* Altform Semibold */
+@font-face {
+  font-family: Altform;
+  font-display: swap;
+  src: url(#{$clover-cdn-fonts-url}/Altform-SemiBold.woff2) format('woff2'),
+    url(#{$clover-cdn-fonts-url}/Altform-SemiBold.woff) format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+/* Altform Bold */
+@font-face {
+  font-family: Altform;
+  font-display: swap;
+  src: url(#{$clover-cdn-fonts-url}/Altform-Bold.woff2) format('woff2'),
+    url(#{$clover-cdn-fonts-url}/Altform-Bold.woff) format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+%altform {
+  font-family: 'Altform', sans-serif !important;
+  font-style: normal;
+}
+
+// Placeholders for each weight
+%altform-light {
+  @extend %altform;
+  font-weight: 300 !important;
+}
+
+%altform-regular {
+  @extend %altform;
+  font-weight: 400 !important;
+}
+
+%altform-semibold {
+  @extend %altform;
+  font-weight: 600 !important;
+}
+
+%altform-bold {
+  @extend %altform;
+  font-weight: 700 !important;
+}

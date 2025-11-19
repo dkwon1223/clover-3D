@@ -1,0 +1,48 @@
+/** Tokens - minimal set of global CSS variables while naming conventions are established */
+:root {
+  /** colors */
+  --color-base-black: #000000;
+  --color-base-green: #238801 !important;
+  --color-secondary-green: #004400 !important; 
+  /** typography */
+  --font-stack: 'Graphik', 'Helvetica', sans-serif;
+  --body-font-size: 0.9375rem;
+  --body-line-height: 1.6;
+}
+
+html {
+  /** https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: border-box;
+  /** accessibility feature do not change:
+  * respect user settings for font size */
+  font-size: 100%;
+}
+
+/** https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  /** typography */
+  color: var(--color-base-black, #000000);
+  font-variant: normal;
+  font-family: var(--font-stack, 'Graphik', 'Helvetica', sans-serif);
+  font-size: var(--body-font-size, 0.9375rem);
+  line-height: var(--body-line-height, 1.6);
+}
+
+/** place in layer so can be easily  overridden when desired */
+@layer base {
+  /** always use appropriate cursor when element is disabled */
+  button:disabled,
+  fieldset:disabled,
+  input:disabled,
+  option:disabled,
+  optgroup:disabled,
+  textarea:disabled {
+    cursor: not-allowed;
+  }
+}

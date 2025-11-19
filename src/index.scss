@@ -1,0 +1,9 @@
+@import './styles/typography';
+
+* {
+  @extend %altform;
+}
+
+button, a, h1, h2 {
+  @extend %altform-light;
+}
